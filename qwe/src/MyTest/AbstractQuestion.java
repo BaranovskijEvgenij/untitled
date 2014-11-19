@@ -20,7 +20,7 @@ public class AbstractQuestion extends JPanel {
     public AbstractQuestion(int n, String question, String answer1, String answer2, String answer3, String answer4) {
         setLayout(null);
 
-        labelMain = getLabel("Вопрос " + n + ". " + question);
+        labelMain = getLabel(question);
         add(labelMain);
 
         option = CheckBoxOne(answer1);
@@ -45,16 +45,25 @@ public class AbstractQuestion extends JPanel {
         add(col);
 
 
+
+
     }
 
+public void  gran(){
+   JLabel  gran = new JLabel("______________________________________________________________________________________________________________");
+    gran.setBounds(10,70,800,20);
+    add(gran);
+
+}
 
     public JLabel getLabel(String text) {
-        Font font = new Font(null, Font.BOLD, 13);
+        Font font = new Font(null, Font.BOLD, 14);
         JLabel label = new JLabel(text);
-        label.setVerticalAlignment(JButton.CENTER);
-        label.setHorizontalAlignment(JButton.LEFT);
-        label.setBounds(25, 10, 700, 50);
+        label.setVerticalAlignment(JLabel.NORTH);
+        label.setHorizontalAlignment(JLabel.LEFT);
+        label.setBounds(25, 10, 700, 70);
         label.setFont(font);
+        label.setForeground(Color.DARK_GRAY);
         return labelMain = label;
 
     }

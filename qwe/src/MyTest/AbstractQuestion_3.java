@@ -81,12 +81,13 @@ public class AbstractQuestion_3 extends JPanel {
     }
 
     public JLabel getLabel(String text) {
-        Font font = new Font(null, Font.BOLD, 13);
+        Font font = new Font(null, Font.BOLD, 14);
         JLabel label = new JLabel(text);
         label.setVerticalAlignment(JLabel.NORTH);
         label.setHorizontalAlignment(JLabel.LEFT);
         label.setBounds(25, 10, 700, 70);
         label.setFont(font);
+        label.setForeground(Color.DARK_GRAY);
         return labelMain = label;
 
     }
@@ -214,15 +215,10 @@ public class AbstractQuestion_3 extends JPanel {
 
     }
 
-    public void setSelectedIndex(int anIndex, int anIndex2, int anIndex3, int anIndex4){
-        option.setSelectedIndex(anIndex);
-        int  one = anIndex;
-        option2.setSelectedIndex(anIndex2);
-        int two = anIndex2;
-        option3.setSelectedIndex(anIndex3);
-        int three  = anIndex3;
-        option4.setSelectedIndex(anIndex4);
-        int four = anIndex4;
+    public void  gran() {
+        JLabel gran = new JLabel("______________________________________________________________________________________________________________");
+        gran.setBounds(10, 70, 800, 20);
+        add(gran);
 
     }
-}
+    }

@@ -5,9 +5,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static MyTest.Frame.getBall;
-import static MyTest.Frame.getFrame;
-import static MyTest.Frame.ten;
+import static MyTest.Frame.*;
 
 public class Vop_9 extends AbstractQuestion_3 {
 
@@ -19,7 +17,7 @@ public class Vop_9 extends AbstractQuestion_3 {
                 "<html>связана с преобразованием получаемой с помощью ТСО информации учащимися с исследовательской целью и с поиском вариантов использования технических средств обучения и воспитания педагогом, моделированием содержания и форм подачи информации</html>",
                 "<html>функция передачи информации</html>");
 
-
+        gran();
         ok.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -35,6 +33,8 @@ public class Vop_9 extends AbstractQuestion_3 {
 
                     if (g1 == 2 && g2 == 1 && g3 == 3 && g4 == 0) {
                         getBall(4);
+                    } else {
+                        getWrong("9,");
                     }
 
                     getFrame(ten);

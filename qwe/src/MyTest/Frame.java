@@ -25,6 +25,7 @@ class Frame {
 
 
     public static int ball = 0;
+    public static String  wrong = " ";
 
    // private JPanel[] vops = {one, two, three, four, five, six, seven, eight, nine, ten};
     //private int index = 0;
@@ -48,20 +49,20 @@ class Frame {
         final JLabel l1 = new JLabel("Добро пожаловать!");
         l1.setFont(font);
         l1.setBounds(170, 70, 600, 50);
-        l1.setForeground(Color.RED);
+        l1.setForeground(Color.YELLOW);
 
         frame.add(l1);
 
 
         final JLabel l2 = createLabel("Чтобы начать тест,нажмите кнопку START");
         l2.setBounds(230, 200, 450, 20);
-        l2.setForeground(Color.darkGray);
+        l2.setForeground(Color.red);
         frame.add(l2);
 
 
         final JLabel l3 = createLabel("Чтобы выйти из теста,нажмите кнопку QUIT");
         l3.setBounds(230, 230, 450, 20);
-        l3.setForeground(Color.DARK_GRAY);
+        l3.setForeground(Color.red);
         frame.add(l3);
 
 
@@ -118,6 +119,11 @@ class Frame {
 
         return ball += number;
     }
+    // ___________________показ неправильных вопросов!
+    public static String getWrong(String text){
+
+        return wrong += text;
+    }
 
 
     private JLabel createLabel(String text) {
@@ -152,7 +158,7 @@ class BgPanel extends JPanel {
     public void paintComponent(Graphics g) {
         Image im = null;
         try {
-            im = ImageIO.read(new File("C:\\Users\\fredy\\Desktop\\Курсовая ТСО\\3.jpg"));
+            im = ImageIO.read(new File("C:\\Users\\fredy\\Desktop\\Курсовая ТСО\\bg_2.jpg"));
         } catch (IOException e) {
         }
         g.drawImage(im, 0, 0, null);

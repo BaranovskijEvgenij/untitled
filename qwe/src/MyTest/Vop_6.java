@@ -4,19 +4,17 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static MyTest.Frame.getBall;
-import static MyTest.Frame.getFrame;
-import static MyTest.Frame.seven;
+import static MyTest.Frame.*;
 
 
 public class Vop_6 extends AbstractQuestion_2 {
     public Vop_6() {
-        super(6, "На рисунке изображен :", "диапозитив", "эпископ", "филомоско", "слайд");
+        super(6, "Вопрос 6. На рисунке изображен :", "диапозитив", "эпископ", "филомоско", "слайд");
 
         remove(icon);
         icon = createIcon(new ImageIcon("C:\\Users\\fredy\\Desktop\\Курсовая ТСО\\13.gif"));
         add(icon);
-
+        gran();
         ok.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -26,6 +24,8 @@ public class Vop_6 extends AbstractQuestion_2 {
 
                     if (option2.isSelected()) {
                         getBall(3);
+                    } else {
+                        getWrong("6,");
                     }
 
 

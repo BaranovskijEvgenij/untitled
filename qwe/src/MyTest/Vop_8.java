@@ -4,9 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static MyTest.Frame.getBall;
-import static MyTest.Frame.getFrame;
-import static MyTest.Frame.nine;
+import static MyTest.Frame.*;
 
 public class Vop_8 extends AbstractQuestion_3 {
 
@@ -18,7 +16,7 @@ public class Vop_8 extends AbstractQuestion_3 {
                 "<html>удобство и безопасность эксплуатации; минимальное количество операций при подготовке и работе с аппаратом; уровень шума; удобство осмотра, ремонта, транспортирования</html> ",
                 "<html>способность аппаратуры обеспечивать необходимые режимы работы (громкость и качество звучания; вместимость кассет аудиовизуальных средств, достаточная для проведения занятия с минимумом перезарядок; универсальность прибора).</html>");
 
-
+        gran();
         ok.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -40,6 +38,8 @@ public class Vop_8 extends AbstractQuestion_3 {
 
                     if (g1 == 1 && g2 == 2 && g3 == 3 && g4 == 0  ) {
                         getBall(4);
+                    } else {
+                        getWrong("8,");
                     }
 
 

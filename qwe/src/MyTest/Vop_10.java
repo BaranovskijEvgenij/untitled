@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 import static MyTest.Frame.getBall;
 import static MyTest.Frame.getFrame;
+import static MyTest.Frame.getWrong;
 
 public class Vop_10 extends AbstractQuestion_3 {
 
@@ -18,6 +19,7 @@ public class Vop_10 extends AbstractQuestion_3 {
                 "<html>изображение на экране создается световыми лучами, проходящими сквозь прозрачный носитель информации</html>",
                 "<html>обеспечивает получение изображения, создающего иллюзию объемности объекта, пространственности наблюдаемой картины</html>");
 
+        gran();
         ok.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -32,6 +34,8 @@ public class Vop_10 extends AbstractQuestion_3 {
                     JOptionPane.showMessageDialog(Vop_10.this, "Врианты ответов не могут повторяться! ");} else {
                     if (g1 == 3 && g2 == 1 && g3 == 0 && g4 == 2) {
                         getBall(4);
+                    } else {
+                        getWrong("10");
                     }
 
                     getFrame(new FinalPanel());
